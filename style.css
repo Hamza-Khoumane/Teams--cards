@@ -1,0 +1,70 @@
+.team {
+  background-color: #e3f6ff;
+  padding: 4rem 3rem;
+
+  display: grid;
+  gap: 4rem;
+}
+
+.team__content {
+  text-align: center;
+
+  display: grid;
+  gap: 1rem;
+}
+
+.team__content--para span {
+  display: block;
+}
+
+.team__members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.team__members--card {
+  display: grid;
+  gap: 0.7rem;
+  place-items: center;
+
+  background-color: white;
+  border-radius: 1rem;
+  height: 42vh;
+}
+
+.team__members--card__image {
+  height: 10rem;
+  width: 10rem;
+}
+
+.team__members--card__image img {
+  margin-top: 1rem;
+  border-radius: 50%;
+  object-position: center;
+}
+
+.team__members--card__icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.team__members--card__icons i {
+  background-color: #e3f6ff;
+  padding: 0.6rem;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.team__members--card__title {
+  line-height: 1.6;
+}
+.team__members--card__title span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(172, 172, 172);
+  text-align: center;
+}
