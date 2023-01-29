@@ -1,19 +1,22 @@
 .team {
-  background-color: #e3f6ff;
-  padding: 4rem 3rem;
-
   display: grid;
-  gap: 4rem;
+  gap: 6rem;
+
+  padding: 4rem;
+  background-color: rgb(242, 246, 247);
 }
 
 .team__content {
-  text-align: center;
+  justify-self: center;
 
   display: grid;
+  grid-template-rows: repeat(3, min-content);
   gap: 1rem;
+
+  text-align: center;
 }
 
-.team__content--para span {
+.team__content--desc span {
   display: block;
 }
 
@@ -23,48 +26,58 @@
   gap: 2rem;
 }
 
-.team__members--card {
+.team__members--member {
   display: grid;
-  gap: 0.7rem;
-  place-items: center;
+  grid-template-rows: 15rem 5rem auto;
+  place-content: center;
+  justify-items: center;
+  gap: 2rem;
 
+  padding: 2rem;
   background-color: white;
   border-radius: 1rem;
-  height: 42vh;
+  text-align: center;
 }
 
-.team__members--card__image {
-  height: 10rem;
-  width: 10rem;
+.team__members--member:first-child .team__members--member__img img,
+.team__members--member:last-child .team__members--member__img img {
+  object-position: center 20%;
 }
 
-.team__members--card__image img {
-  margin-top: 1rem;
+.team__members--member:nth-child(2) .team__members--member__img img,
+.team__members--member:nth-child(3) .team__members--member__img img {
+  object-position: 20% center;
+}
+
+.team__members--member__img {
+  height: 15rem;
+  width: 15rem;
+}
+
+.team__members--member__img img {
   border-radius: 50%;
-  object-position: center;
 }
 
-.team__members--card__icons {
+.team__members--member__name,
+.team__members--member__role {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+
+.team__members--member__role {
+  align-self: end;
+
+  color: rgb(130 129 129);
+}
+
+.team__members--member__social {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.team__members--card__icons i {
-  background-color: #e3f6ff;
-  padding: 0.6rem;
+.team__members--member__social i {
+  padding: 1rem;
+  background-color: rgb(242, 246, 247);
   border-radius: 50%;
-
-  cursor: pointer;
-}
-
-.team__members--card__title {
-  line-height: 1.6;
-}
-.team__members--card__title span {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: rgb(172, 172, 172);
-  text-align: center;
 }
